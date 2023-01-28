@@ -65,7 +65,7 @@
 
         /* level 1 */
         ol {
-            color: lightblue;
+            color: black;
         }
 
         /* level 2 */
@@ -76,6 +76,30 @@
         /* level 3 */
         ol ol ul {
             color: darkblue;
+        }
+
+        /* ----------- pseudo elements ----------- */
+        /* ::before and ::after */
+        h2::before,
+        h2::after {
+            content: '*';
+            color: red;
+        }
+
+        .custom-marker-content {
+            /* remove default markers */
+            list-style-type: none;
+            /* create counter */
+            counter-reset: number;
+        }
+
+        .custom-marker-content li::before {
+            /* show counter value */
+            content: '(' counter(number) ') ';
+            /* increment counter */
+            counter-increment: number;
+
+            font-weight: bold;
         }
     </style>
 </head>
@@ -116,6 +140,14 @@
     <!-- Ordered List -->
     <h2>Ordered List</h2>
     <ol>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Adipisci unde sit cum excepturi et.</li>
+        <li>Quidem animi dolores odio ut reprehenderit.</li>
+        <li>Rem eum officia sunt veniam optio.</li>
+        <li>Natus reprehenderit repellat quasi fuga inventore!</li>
+    </ol>
+    <h3>Ordered List with custom marker content</h3>
+    <ol class="custom-marker-content">
         <li>Lorem ipsum dolor sit amet consectetur.</li>
         <li>Adipisci unde sit cum excepturi et.</li>
         <li>Quidem animi dolores odio ut reprehenderit.</li>
