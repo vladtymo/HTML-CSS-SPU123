@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lists</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .reset {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* ----------- unordered list style ----------- */
+        ul.custom-marker {
+            list-style-type: square;
+            list-style-position: outside;
+        }
+
+        /* ::marker - pseudo class that styling list item markers */
+        ul.custom-marker li::marker {
+            color: green;
+        }
+
+        ul.custom-marker li.important::marker {
+            color: orange;
+        }
+
+        ul.image-marker {
+            list-style-image: url(./images/leaf.png);
+        }
+
+        /* ----------- ordered list style ----------- */
+        ol {
+            list-style-type: georgian;
+        }
+
+        /* ----------- definition list style ----------- */
+        dt {
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            padding-left: 40px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        dd {
+            background-color: black;
+            color: white;
+
+            padding: 10px;
+            margin-left: 0;
+            border-radius: 6px;
+
+            margin: 2px 0 12px;
+        }
+
+        /* ----------- multilevel list style ----------- */
+
+        /* level 1 */
+        ol {
+            color: lightblue;
+        }
+
+        /* level 2 */
+        ol ol {
+            color: blue;
+        }
+
+        /* level 3 */
+        ol ol ul {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Working with Lists in HTML</h1>
+
+    <!-- Unordered List -->
+    <!-- Emmet: ul>li*5>lorem5 -->
+    <h2>Unordered List</h2>
+    <ul class="custom-marker">
+        <!-- List Item -->
+        <li>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quae eum placeat
+            quidem consequatur delectus excepturi a vel illo eos! Quidem unde inventore tempore nostrum dignissimos,
+            eius aperiam vel enim!</li>
+        <li class="important">Neque earum eius unde qui.</li>
+        <li>Vero suscipit optio hic culpa!</li>
+        <li>Distinctio voluptates illo quam repellat.</li>
+        <li class="important">Illo corporis molestias reprehenderit cum!</li>
+    </ul>
+
+    <h3>List with reseted styles</h3>
+    <ul class="reset">
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Deserunt est magnam accusantium neque earum.</li>
+        <li>Magnam, voluptatum reiciendis. Voluptatum, fugiat magnam?</li>
+        <li>Iure minus quisquam architecto impedit. Esse.</li>
+    </ul>
+
+    <h3>List with image markers</h3>
+    <ul class="image-marker">
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
+        <li>Unde pariatur saepe voluptates, voluptate esse quisquam.</li>
+        <li>Distinctio praesentium nam nulla est ab cupiditate.</li>
+        <li>Voluptate veritatis tempore hic sequi vero ipsum.</li>
+    </ul>
+
+    <!-- Ordered List -->
+    <h2>Ordered List</h2>
+    <ol>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Adipisci unde sit cum excepturi et.</li>
+        <li>Quidem animi dolores odio ut reprehenderit.</li>
+        <li>Rem eum officia sunt veniam optio.</li>
+        <li>Natus reprehenderit repellat quasi fuga inventore!</li>
+    </ol>
+
+    <!-- Definition List -->
+    <h2>Definition List</h2>
+    <dl>
+        <!-- title -->
+        <dt>Title</dt>
+        <!-- description -->
+        <dd>Description</dd>
+
+        <!-- Emmet: ((dt>lorem3)+dd>lorem20)*4 -->
+        <dt>Lorem, ipsum dolor.</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique at a rem omnis in! Dolorem facere
+            consectetur omnis dolorum ex!</dd>
+        <dt>Quaerat, illum minima.</dt>
+        <dd>Molestias voluptatum commodi tenetur quaerat quae error. Recusandae error nobis, nihil temporibus libero
+            facilis quo culpa eaque nemo porro tempore.</dd>
+        <dt>Neque, repudiandae quasi.</dt>
+        <dd>Inventore, eos enim. Officia, veniam dignissimos accusamus totam consequuntur quaerat cum consequatur
+            molestias, soluta qui molestiae, aspernatur laboriosam sed. Iure.</dd>
+        <dt>Ex, assumenda maxime.</dt>
+        <dd>Modi quaerat enim aspernatur dignissimos quibusdam, quidem ea. Ratione iste corporis saepe omnis, cum
+            doloribus rerum nemo enim ducimus distinctio.</dd>
+    </dl>
+
+    <h2>Multilevel List</h2>
+    <ol>
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, tenetur.
+            <ul>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Quaerat error labore exercitationem?</li>
+            </ul>
+        </li>
+        <li>Deleniti natus doloremque atque eos. Ut fugit quibusdam illum voluptate!
+            <ol>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Eos quidem ratione repellendus excepturi.
+                    <ul>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Quaerat error labore exercitationem?</li>
+                    </ul>
+                </li>
+                <li>Molestiae, quae maxime! Similique, deleniti.</li>
+            </ol>
+        </li>
+        <li>Vitae molestias laudantium eum impedit dolorum obcaecati libero totam asperiores.</li>
+        <li>Omnis tempore repellat harum a consequuntur explicabo, rem animi eum.
+            <ol>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Eos quidem ratione repellendus excepturi.</li>
+                <li>Molestiae, quae maxime! Similique, deleniti.</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+
+</html>
