@@ -87,6 +87,28 @@
 
             flex-basis: 33.33%;
         }
+
+        /* Example of elemets on sides layout */
+        .on-sides {
+            margin-top: 20px;
+            border: 1px solid black;
+
+            display: flex;
+            /* justify-content: space-between; */
+            gap: 10px;
+        }
+
+        .on-sides div {
+            background-color: darkblue;
+            border: 1px solid rgb(0, 242, 255);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .right-side {
+            margin-left: auto;
+        }
     </style>
 </head>
 
@@ -102,8 +124,15 @@
     <h2>Row layout example</h2>
     <div class="row-3">
         <div>Block 1</div>
+        <div>Block 2</div>
+        <div>Block 3</div>
+    </div>
+
+    <h2>Elements on sides layout example</h2>
+    <div class="on-sides">
         <div>Block 1</div>
-        <div>Block 1</div>
+        <div>Block 2</div>
+        <div class="right-side">Block 3</div>
     </div>
 </body>
 
